@@ -55,7 +55,7 @@ module.exports = {
     },
     plugins: [                                           // Here we initialize the plugins
         extractPlugin,
-        new HtmlWebpackPlugin({
+        new HtmlWebpackPlugin({                          // creates a new html file based on an template
             template: 'src/index.html'
         }),
         new CleanWebpackPlugin(['dist'])                 // cleanup the folder
