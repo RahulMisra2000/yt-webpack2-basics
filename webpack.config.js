@@ -55,7 +55,8 @@ module.exports = {
     },
     plugins: [                                           // Here we initialize the plugins
         extractPlugin,
-        new HtmlWebpackPlugin({                          // creates a new html file based on an template
+        new HtmlWebpackPlugin({                          // creates a new html file (based on an template if provided) and injects
+                                                         // the .js and .css bundles that were created in this workflow
             template: 'src/index.html'
         }),
         new CleanWebpackPlugin(['dist'])                 // cleanup the folder
